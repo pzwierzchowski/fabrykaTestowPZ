@@ -23,10 +23,15 @@ while True:
     if choice in ('1', '2', '3', '4'):
         num1 = float(input("Podaj pierwszą liczbę: "))
         num2 = float(input("Podaj drugą liczbę: "))
-
-
-# tu wpisz swój kod :)
-
-
+        if choice == '1':
+            print(int(add(num1, num2)))
+        if choice == '2':
+            print(int(subtract(num1, num2)))
+        if choice == '3':
+            print(int(multiply(num1, num2)))
+        if choice == '4' and num2 != 0:
+            print("{:.2f}".format(divide(num1, num2))) #Brak int() ponieważ dzielenie może mieć miejsce po przecinku, użytya została również formuła formato by zmniejszyć miejsce po przecinku do 2
+        if choice == '4' and num2 == 0: 
+            print('Nie można dzielić przez 0')
     else:
         print("Błędna wartość, podaj poprawną")
